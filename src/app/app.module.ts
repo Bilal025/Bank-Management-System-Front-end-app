@@ -9,13 +9,15 @@ import { HomeComponentComponent } from './home-component/home-component.componen
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CustomerServiceService } from './service/customer-service.service';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponentComponent,
     RegisterComponentComponent,
-    HomeComponentComponent
+    HomeComponentComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,

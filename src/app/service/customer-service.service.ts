@@ -38,7 +38,7 @@ export class CustomerServiceService {
     return this.httpClient.get<Customer>(`${this.url}/get/${username}`);
   }
 
-  depositAmmount(username: string, amount : number) : Observable<String> {
+  depositAmmount(username: string, amount : any) : Observable<String> {
     return this.httpClient.put<String>(`${this.url}/deposit?username=${username}&amount=${amount}`, {});
 
   } 

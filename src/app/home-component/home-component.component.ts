@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CustomerServiceService } from '../service/customer-service.service';
 import { Customer } from '../model/customer';
-import { NgForm } from '@angular/forms';
+import { FormControl, NgForm, Validators } from '@angular/forms';
 import { Transaction } from '../model/transaction';
 
 @Component({
@@ -13,7 +13,7 @@ import { Transaction } from '../model/transaction';
 export class HomeComponentComponent implements OnInit {
 
   customerUsername! : string;
-  depositAmmount! : number;
+  depositAmmount! : string;
   withdrawAmmount! : number;
   billAmmount! : number;
   biller!: string;
@@ -23,6 +23,7 @@ export class HomeComponentComponent implements OnInit {
   receiverAccountNumber! : number;
   recieverName! : string;
   amount! : number;
+  invalidInput: boolean = false;
 
   @ViewChild('myForm') myForm!: NgForm;
   @ViewChild('DepositFrom') DepositFrom!: NgForm;
@@ -32,12 +33,12 @@ export class HomeComponentComponent implements OnInit {
   transactions! : Transaction[];
 
   constructor(private customerService : CustomerServiceService, private actRouter : ActivatedRoute, private router : Router) {}
-
   
   ngOnInit(): void {
     this.customerUsername = this.actRouter.snapshot.params["customerUsername"];
     this.customerService.getEmployee(this.customerUsername).subscribe( data => {
       this.customer = data;
+      
     },
     error => {
       console.error('Error fetching customer data:', error);
@@ -45,6 +46,7 @@ export class HomeComponentComponent implements OnInit {
     
     );
     this.getTransactions();
+    this.transactions = this.transactions.reverse();
     
   }
 
@@ -82,7 +84,7 @@ export class HomeComponentComponent implements OnInit {
 
   getTransactions() {
     this.customerService.getTransactionList(this.customerUsername).subscribe( data => {
-      this.transactions = data
+      this.transactions = data;
      
     });
   }
