@@ -14,6 +14,7 @@ export class HomeComponentComponent implements OnInit {
 
   customerUsername! : string;
   depositAmmount! : string;
+  
   withdrawAmmount! : number;
   billAmmount! : number;
   biller!: string;
