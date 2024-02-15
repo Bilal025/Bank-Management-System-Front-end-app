@@ -29,6 +29,10 @@ export class CustomerServiceService {
   private baseURL5 : String = "http://192.168.4.170:8099/customer/gettransactions"; 
   private baseURL6 : String = "http://192.168.4.170:8099/billpayment";
 
+  signup(customer: Customer): Observable<Customer> {
+    const url = `${this.url}/signup`;
+    return this.httpClient.post<Customer>(url, customer);
+  }
 
   login(username: string, password: string): Observable<boolean> {
     return this.httpClient.post<boolean>(`${this.url}/login`, { username, password });
@@ -59,10 +63,7 @@ export class CustomerServiceService {
     return this.httpClient.get<Transaction[]>(`${this.url}/transactions/${username}`);
   }
 
-  signup(customer: Customer): Observable<Customer> {
-    const url = `${this.url}/signup`;
-    return this.httpClient.post<Customer>(url, customer);
-  }
+  
   checkUsername(username: string): Observable<boolean> {
     const url = `${this.url}/${username}`;
     return this.httpClient.get<boolean>(url);
