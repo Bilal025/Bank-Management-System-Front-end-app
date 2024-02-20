@@ -52,4 +52,12 @@ export class CustomerServiceService {
     const url = `${this.url}/${username}`;
     return this.httpClient.get<boolean>(url);
   }
+
+  updateCustomerPassword(username:string, currentPassword: string, newPassword: string): Observable<string> {
+    const body = {
+      currentPassword: currentPassword,
+      newPassword: newPassword
+    };
+    return this.httpClient.put<string>(`${this.url}/updateCustomerPassword?username=${username}`, body);
+  }
 }

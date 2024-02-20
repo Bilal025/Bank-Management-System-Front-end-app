@@ -76,6 +76,8 @@ export class HomeComponentComponent implements OnInit {
 
   onTransferFund(){    
     this.customerService.fundTransfer(this.customerUsername,this.receiverAccountNumber,this.amount).subscribe(data=>{
+      this.msg =data; 
+      console.log(this.msg);
       this.myForm.resetForm();
     },error => {
       console.error('Error on transfering fund:', error);
