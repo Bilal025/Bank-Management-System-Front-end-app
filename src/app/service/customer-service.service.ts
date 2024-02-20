@@ -10,24 +10,8 @@ import { Transaction } from '../model/transaction';
 export class CustomerServiceService {
 
    url = 'http://localhost:8098/customer';
-  
-
-  // allCustomer = 'get';
-  // getByUsername = '/get/{username}'
-  // geTransaction = '/gettransactions'
-  // deleteUsername = '/delete/{username}'
-  // transactionByUser = '/transactions/{username}'
-  // billPayment= '/billpayment/{username}'
 
   constructor(private httpClient : HttpClient) { }
-
-  
-  private baseURL1 : String = "http://lapitrd144.cbcsl.ad:8099/login";
-  private baseURL2 : String = "http://lapitrd144.cbcsl.ad:8099/list";
-  private baseURL3 : String = "http://192.168.4.170:8099/deposit";
-  private baseURL4 : String = "http://192.168.4.170:8099/withdraw";
-  private baseURL5 : String = "http://192.168.4.170:8099/customer/gettransactions"; 
-  private baseURL6 : String = "http://192.168.4.170:8099/billpayment";
 
   signup(customer: Customer): Observable<Customer> {
     const url = `${this.url}/signup`;

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CustomerServiceService } from '../service/customer-service.service';
+import swal from 'sweetalert';
 
 @Component({
   selector: 'app-login-component',
@@ -22,7 +23,11 @@ export class LoginComponentComponent {
       if (data) {
         this.router.navigate(['home', this.customerUsername]);
       } else {
-        alert('Invalid username or password');
+        //alert('Invalid username or password');
+        swal({
+          title: 'Invalid username or password',
+          icon: 'warning'
+        });
       }
     }, error => {
       console.error('Error during login:', error);
