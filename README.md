@@ -1,27 +1,59 @@
-# BankManagementSystemUI
+<h1>Bank Management System</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
+Welcome to the Bank Management System project repository! This collaborative effort aims to provide a comprehensive solution for managing banking operations efficiently. We've successfully implemented both the front-end and back-end components, with a focus on user-friendly interfaces and robust backend functionality.
 
-## Development server
+<h3>Technologies Used</h3>
+Frontend: Angular, TypeScript, HTML, Tailwind CSS<br>
+Backend: Spring Boot, Java, Spring Data JPA, Maven, JAVA JDK 17, REST API.<br>
+Database: Oracle<br>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<h3>Getting Started</h3>
+* Clone the repository.<br>
+* Install Dependencies: npm install <br>
+* Run the application: ng serve<br>
+* The angular should now be running at localhost.<br>
 
-## Code scaffolding
+<h1>Features</h1>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Customer Registration (Sign Up):<br>
 
-## Build
+Allows new customers to register by providing necessary details.<br>
+## Customer Authentication (Login):<br>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Authenticates customers based on their provided credentials.<br>
+## View All Customers:<br>
 
-## Running unit tests
+Retrieves a list of all registered customers.<br>
+## View Customer Details:<br>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Retrieves details of a specific customer based on their username.<br>
+## Check Username Availability:<br>
 
-## Running end-to-end tests
+Allows checking the availability of a username during registration.<br>
+## View All Transactions:<br>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Retrieves a list of all transactions performed in the system.<br>
+## View Transactions by Username:<br>
 
-## Further help
+Retrieves transactions specific to a customer based on their username.<br>
+## Save Customer Transactions:<br>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Records customer transactions, such as deposits and withdrawals.<br>
+## Bill Payment:<br>
+
+Supports bill payments by deducting the specified amount from the customer's account.<br>
+## Delete Customer Account:<br>
+
+Deletes a customer account from the system.<br>
+## Deposit Funds:<br>
+
+Allows customers to deposit funds into their accounts.<br>
+## Withdraw Funds:<br>
+
+Allows customers to withdraw funds from their accounts.<br>
+## Update Customer Password:<br>
+
+Enables customers to update their login password.<br>
+## Fund Transfer:
+
+Facilitates the transfer of funds between customer accounts.
