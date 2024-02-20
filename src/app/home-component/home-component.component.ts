@@ -85,7 +85,7 @@ export class HomeComponentComponent implements OnInit {
 
   getTransactions() {
     this.customerService.getTransactionList(this.customerUsername).subscribe( data => {
-      this.transactions = data;
+      this.transactions = data.reverse();
      
     });
   }
