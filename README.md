@@ -70,4 +70,10 @@ Customer Registration (Sign Up):<br>
  Fund Transfer:
 
 * Facilitates the transfer of funds between customer accounts.
+<br><br>
 
+![scrnli_1_25_2024_4-40-38 PM](https://github.com/Bilal025/Bank-Management-System-Front-end-app/assets/95700674/e00967b0-279e-4fe7-b1ff-e5c69070635e)
+
+<br><br>
+
+<h1>Thank You</h1>
