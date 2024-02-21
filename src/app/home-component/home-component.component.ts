@@ -29,7 +29,7 @@ export class HomeComponentComponent implements OnInit {
   @ViewChild('myForm') myForm!: NgForm;
   @ViewChild('DepositFrom') DepositFrom!: NgForm;
   @ViewChild('WithdrawFrom') WithdrawFrom!: NgForm;
-  @ViewChild('fundTransform') fundTransform!: NgForm;
+  @ViewChild('fundTransferform') fundTransferform!: NgForm;
 
   customer : Customer = new Customer();
   transactions! : Transaction[];
@@ -79,7 +79,7 @@ export class HomeComponentComponent implements OnInit {
     this.customerService.fundTransfer(this.customerUsername,this.receiverAccountNumber,this.amount).subscribe(data=>{
       this.msg =data; 
       console.log(this.msg);
-      this.fundTransform.resetForm();
+      this.fundTransferform.resetForm();
     },error => {
       console.error('Error on transfering fund:', error);
     }
